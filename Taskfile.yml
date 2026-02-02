@@ -1,0 +1,29 @@
+version: '3'
+
+tasks:
+  default:
+    desc: List all available tasks
+    cmds:
+      - task --list
+
+  build:
+    desc: Build the todo executable
+    cmds:
+      - mkdir -p bin
+      - go build -o bin/todo ./cmd/todo
+
+  build:todo:
+    desc: Build the todo executable
+    cmds:
+      - mkdir -p bin
+      - go build -o bin/todo ./cmd/todo
+
+  run:
+    desc: Run the todo application
+    cmds:
+      - go run ./cmd/todo
+
+  clean:
+    desc: Clean build artifacts
+    cmds:
+      - rm -rf bin/
