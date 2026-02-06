@@ -131,8 +131,8 @@ go install github.com/go-task/task/v3/cmd/task@latest
 
 ```bash
 task                    # List all available tasks
-task build             # Build all executables (todo, tododiff, todopath, todomerge, etc.)
-task build:todo        # Build specific tool
+task build             # Build all executables (todo, tododiff, todopatch, etc.)
+task build:todo        # Build the main todo executable only
 task build:tododiff    # Build tododiff tool
 task test              # Run all tests
 task test:coverage     # Run tests with coverage
@@ -316,10 +316,10 @@ task install
 # Run tests
 task test
 
-# Build all executables (todo, tododiff, todopath, todomerge, etc.)
+# Build all executables (todo, tododiff, todopatch, etc.)
 task build
 
-# Build specific tool
+# Build a specific tool (e.g. tododiff, todopatch)
 task build:tododiff
 
 # Run a specific tool (after building)
@@ -397,10 +397,10 @@ When working on this project:
 ## Useful Commands
 
 ```bash
-# Build all executables
+# Build all executables (todo, tododiff, todopatch, etc.)
 task build
 
-# Build specific tool
+# Build a specific tool
 go build -o bin/tododiff ./cmd/tododiff
 task build:tododiff
 

@@ -7,10 +7,12 @@ tasks:
       - task --list
 
   build:
-    desc: Build the todo executable
-    cmds:
-      - mkdir -p bin
-      - go build -o bin/todo ./cmd/todo
+    desc: Build all executables (todo, tododiff, todopatch, etc.)
+    deps:
+      - build:todo
+      - build:tododiff
+      - build:todopatch
+    cmds: []
 
   build:todo:
     desc: Build the todo executable
