@@ -18,6 +18,18 @@ tasks:
       - mkdir -p bin
       - go build -o bin/todo ./cmd/todo
 
+  build:todopatch:
+    desc: Build the todopatch executable
+    cmds:
+      - mkdir -p bin
+      - go build -o bin/todopatch ./cmd/todopatch
+
+  build:tododiff:
+    desc: Build the tododiff executable
+    cmds:
+      - mkdir -p bin
+      - go build -o bin/tododiff ./cmd/tododiff
+
   run:
     desc: Run the todo application
     cmds:
